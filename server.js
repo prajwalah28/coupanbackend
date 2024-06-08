@@ -20,7 +20,7 @@
 // });
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors'); // Import cors middleware
+// const cors = require('cors'); // Import cors middleware
 const apiRoutes = require('./routes/api');
 
 const app = express();
@@ -32,9 +32,9 @@ mongoose.connect('mongodb+srv://prajwalah28:Dz2p3hQbrbr3FVEq@cluster0.merm1qd.mo
     .catch(err => console.error('Failed to connect to MongoDB Atlas', err));
 
 app.use(express.json());
-app.use(cors({
-  origin: 'http://localhost:5173' // Set the origin to allow requests from localhost:3001
-}));
+// app.use(cors({
+//   origin: 'http://localhost:5173' // Set the origin to allow requests from localhost:3001
+// }));
 
 // Routes
 app.use('/api', apiRoutes);
